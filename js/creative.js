@@ -46,11 +46,12 @@
     }, 300);
 
     // Initialize and Configure Magnific Popup Lightbox Plugin
-    $('.popup-gallery').magnificPopup({
+    $('.popup-gallery').each(function(){
+      $(this).magnificPopup({
         delegate: 'a',
         type: 'image',
         tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-img-mobile',
+        mainClass: 'mfp-with-zoom',
         gallery: {
             enabled: true,
             navigateByImgClick: true,
